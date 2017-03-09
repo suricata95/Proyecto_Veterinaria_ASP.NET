@@ -75,10 +75,26 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\bootstrap.css" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\jquery-3.1.1.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VeterinariaEntidades\VeterinariaEntidades.csproj">
+      <Project>{97885e13-2393-4b92-8324-56b11b9b95f0}</Project>
+      <Name>VeterinariaEntidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VeterinariaLogica\VeterinariaLogica.csproj">
+      <Project>{c9824282-cde0-4c6a-9656-e879b2fe77f3}</Project>
+      <Name>VeterinariaLogica</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

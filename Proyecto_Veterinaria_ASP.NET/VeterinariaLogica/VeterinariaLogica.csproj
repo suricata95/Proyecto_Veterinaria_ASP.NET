@@ -42,6 +42,16 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VeterinariaDatos\VeterinariaDatos.csproj">
+      <Project>{8f7a1c65-355f-4727-b8f9-414f5e4b05d8}</Project>
+      <Name>VeterinariaDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VeterinariaEntidades\VeterinariaEntidades.csproj">
+      <Project>{97885e13-2393-4b92-8324-56b11b9b95f0}</Project>
+      <Name>VeterinariaEntidades</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
