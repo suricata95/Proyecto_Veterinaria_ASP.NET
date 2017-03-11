@@ -66,9 +66,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\formulario.css" />
     <Content Include="css\Login.css" />
     <Content Include="Login.aspx" />
-    <Content Include="MantenimientoPacientes.aspx" />
+    <Content Include="Pacientes\NuevoPaciente.aspx" />
     <Content Include="packages.config" />
     <Content Include="Principal.Master" />
     <None Include="Web.Debug.config">
@@ -92,12 +93,12 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MantenimientoPacientes.aspx.cs">
-      <DependentUpon>MantenimientoPacientes.aspx</DependentUpon>
+    <Compile Include="Pacientes\NuevoPaciente.aspx.cs">
+      <DependentUpon>NuevoPaciente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MantenimientoPacientes.aspx.designer.cs">
-      <DependentUpon>MantenimientoPacientes.aspx</DependentUpon>
+    <Compile Include="Pacientes\NuevoPaciente.aspx.designer.cs">
+      <DependentUpon>NuevoPaciente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Principal.Master.cs">
       <DependentUpon>Principal.Master</DependentUpon>

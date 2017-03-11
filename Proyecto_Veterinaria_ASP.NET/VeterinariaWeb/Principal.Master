@@ -7,39 +7,38 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <script src="scripts/bootstrap.js"></script>
     <script src="scripts/jquery-3.1.1.js"></script>
-    <%--<link href="css/Login.css" rel="stylesheet" />--%>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/formulario.css" rel="stylesheet" />     
+    <script src="scripts/bootstrap.js"></script>
+   
     
 </head>
 <body>
     <form id="form1" runat="server">   
         
         <header>
-            <nav role="navigation" class="navbar navbar-default">
-        <div class="navbar-header">
-            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="#" class="navbar-brand">Pacientes</a>
+         <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <asp:Label ID="Label1" runat="server" Text="Veterinaria" CssClass="navbar-brand"></asp:Label>               
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="NuevoPaciente.aspx">Nuevo paciente</a></li>                    
+                </ul>
+            </div>
         </div>
-
-        <div id="navbarCollapse" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Registro de estudiantes</a></li>
-                <li><a href="#">Manejo de acciones</a></li>
-            </ul>
-        </div>
-            </nav>
+    </div>
         </header>
 
       
-    <div>    
+    <div class="container body-content">    
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
