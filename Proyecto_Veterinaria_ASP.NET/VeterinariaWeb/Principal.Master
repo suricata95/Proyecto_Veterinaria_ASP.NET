@@ -11,12 +11,16 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/formulario.css" rel="stylesheet" />     
     <script src="scripts/bootstrap.js"></script>
-   
     
+
+
 </head>
 <body>
+    <script src="scripts/FuncionesMantenimientos.js"></script> <%--Validaciones de mantenimientos--%>
+    <asp:ContentPlaceHolder ID="ScriptContent" runat="server" />
+
     <form id="form1" runat="server">   
-        
+        <asp:ScriptManager ID="ScripManager1" runat="server"></asp:ScriptManager>
         <header>
          <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -30,7 +34,8 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="NuevoPaciente.aspx">Nuevo paciente</a></li>                    
+                    <li><a href="Mantenimientos/NuevoPaciente.aspx">Nuevo paciente</a></li>
+                    <li><a href="Mantenimientos/NuevoDueño.aspx">Nuevo Dueño</a></li>                    
                 </ul>
             </div>
         </div>

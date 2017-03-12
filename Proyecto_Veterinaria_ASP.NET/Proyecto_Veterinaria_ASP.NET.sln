@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeterinariaLogica", "Veteri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeterinariaWeb", "VeterinariaWeb\VeterinariaWeb.csproj", "{FE7452E2-50FA-450E-8B1B-FFBD27AEBD23}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService", "WebService\WebService.csproj", "{E9C41F6C-17AA-45FC-90BA-EE109800E3E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{FE7452E2-50FA-450E-8B1B-FFBD27AEBD23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE7452E2-50FA-450E-8B1B-FFBD27AEBD23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE7452E2-50FA-450E-8B1B-FFBD27AEBD23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9C41F6C-17AA-45FC-90BA-EE109800E3E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9C41F6C-17AA-45FC-90BA-EE109800E3E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9C41F6C-17AA-45FC-90BA-EE109800E3E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9C41F6C-17AA-45FC-90BA-EE109800E3E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

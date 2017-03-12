@@ -11,6 +11,15 @@
         <%-- Este h4 para informar cual acción esta realizando --%>
         <h4>Nuevo Paciente</h4>
         <%-- Aquí comienza el maquetado para un control ejemplo un textbox --%>
+         <div class="form-group">
+            <asp:Label ID="Label9" runat="server" Text="ID Paciente" CssClass="control-label col-md-2"></asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox ID="txtPacienteID" runat="server" CssClass="form-control entrada" ReadOnly="True"></asp:TextBox>
+                <%-- ReadOnly solo para que sea de LECTURA --%>
+            </div>
+        </div>
+
+
         <div class="form-group">
 
             <asp:Label ID="Label1" runat="server" Text="Nombre" CssClass="control-label col-md-2"></asp:Label>
@@ -71,12 +80,12 @@
             </div>
         </div>
 
-        <div class="form-group">
+      <%--  <div class="form-group">
             <asp:Label ID="Label9" runat="server" Text="Veterinaria" CssClass="control-label col-md-2"></asp:Label>
             <div class="col-md-10">
                 <asp:TextBox ID="txtVeterinaria" runat="server" CssClass="form-control entrada"></asp:TextBox>
             </div>
-        </div>
+        </div>--%>
 
         <div class="form-group">
             <asp:Label ID="Label10" runat="server" Text="Observaciones" CssClass="control-label col-md-2"></asp:Label>
