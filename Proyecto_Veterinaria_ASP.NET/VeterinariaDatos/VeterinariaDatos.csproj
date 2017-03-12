@@ -45,6 +45,7 @@
     <Compile Include="DatabaseFactory.cs" />
     <Compile Include="DuennoDatos.cs" />
     <Compile Include="Log.cs" />
+    <Compile Include="PacienteDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

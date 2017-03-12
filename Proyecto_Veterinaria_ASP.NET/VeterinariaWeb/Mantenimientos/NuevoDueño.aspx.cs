@@ -41,6 +41,9 @@ namespace VeterinariaWeb.Dueño
             }
             servicio.insertarDuenno(duennoW);
             LimpiarRegistro(); //Limpia los campos una vez ingresado el objeto
+            String mensaje = @"alert('Datos guardados correctamente')";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "Informacion", mensaje, true);
+            
 
         }
 

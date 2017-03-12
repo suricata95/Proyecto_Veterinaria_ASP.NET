@@ -72,6 +72,7 @@
   <ItemGroup>
     <Content Include="css\formulario.css" />
     <Content Include="css\Login.css" />
+    <Content Include="Filtros\FiltroDuenno.aspx" />
     <Content Include="Mantenimientos\NuevoDueño.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Mantenimientos\NuevoPaciente.aspx" />
@@ -92,6 +93,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Filtros\FiltroDuenno.aspx.cs">
+      <DependentUpon>FiltroDuenno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Filtros\FiltroDuenno.aspx.designer.cs">
+      <DependentUpon>FiltroDuenno.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\NuevoDueño.aspx.cs">
       <DependentUpon>NuevoDueño.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

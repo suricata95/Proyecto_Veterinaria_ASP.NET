@@ -40,5 +40,11 @@ namespace WebService
             duenno.Modificar(cli);
         }
 
+        //Pacientes
+        public void insertarPaciente(PacientesEntidad pa)
+        {
+            PacienteLogica paciente = new PacienteLogica();
+            paciente.Nuevo(pa);
+        }
     }
 }
