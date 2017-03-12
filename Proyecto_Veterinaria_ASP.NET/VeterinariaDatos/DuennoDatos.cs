@@ -28,5 +28,31 @@ namespace VeterinariaDatos
 
         }
 
+        public static void Modificar(int dueID, string nombreD, string apellidosD, string telD, string correoD)
+        {
+            Database db = DatabaseFactory.CreateDatabase("Default");
+
+            SqlCommand comando = new SqlCommand("usp_UPDATE_Duenno");
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@duennoid", dueID);
+            comando.Parameters.AddWithValue("@nombre", nombreD);
+            comando.Parameters.AddWithValue("@apellidos", apellidosD);
+            comando.Parameters.AddWithValue("@telefono", telD);
+            comando.Parameters.AddWithValue("@correo", correoD);
+            db.ExecuteNonQuery(comando);
+        }
+
+        public static DataSet SeleccionarTodos()
+        {
+            Database db = DatabaseFactory.CreateDatabase("Default");
+
+            SqlCommand comando = new SqlCommand("usp_SELECT_Duenno_All");
+            // Es requerido indicar que el tipo es un StoreProcedure
+            comando.CommandType = CommandType.StoredProcedure;
+
+            DataSet ds = db.ExecuteReader(comando, "DuennoLogica");
+            return ds;
+        }
+
     }
 }

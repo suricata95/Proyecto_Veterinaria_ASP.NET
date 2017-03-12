@@ -78,7 +78,7 @@
         <div class="form-group">
             <asp:Label ID="Label4" runat="server" Text="Correo Eléctronico" CssClass="control-label col-md-2"></asp:Label>
             <div class="col-md-10">
-                <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control entrada"></asp:TextBox>
+                <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control entrada" ></asp:TextBox>
                 <asp:RegularExpressionValidator ID="txtEmailReg" runat="server" ErrorMessage="Ingrese un correo elétronico válido" ControlToValidate="txtCorreo" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="#cc0000"></asp:RegularExpressionValidator> <%--Validacion para que lo que se ingreso en el campo sea con formato correcto--%>
                  <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Ingrese su correo" ControlToValidate="txtCorreo" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator> <%--Validacion para que el campo no este vacio--%>
             </div>
@@ -87,6 +87,81 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <asp:Button ID="btnNuevo" runat="server" Text="Nuevo" CssClass="btn btn-default" OnClick="btnNuevo_Click" OnClientClick="return ConfirmarIngreso();"/>
+            </div>
+        </div>
+
+         <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                 <tr>
+            <td colspan="2">
+                <h4>Clientes registrados</h4>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <asp:GridView ID="grvClientes" runat="server"
+                    DataKeyNames="duennoID" 
+                    AutoGenerateColumns="false"
+                    AutoGenerateEditButton ="true"
+                    OnRowCancelingEdit="grvClientes_RowCancelingEdit"
+                    OnRowEditing="grvClientes_RowEditing"
+                    OnRowDataBound="grvClientes_RowDataBound"
+                    OnRowUpdating="grvClientes_RowUpdating">
+
+                    <Columns>
+                        <asp:BoundField DataField="duennoID" HeaderText="Identificaci&#243;n Cliente" ReadOnly="true" ></asp:BoundField>
+                        
+                        
+                        <asp:TemplateField HeaderText="Nombre Cliente">
+                            <ItemTemplate>
+                                <asp:Label ID="lblNombre" runat="server" Text='<%# Eval("nombreDuenno") %>'></asp:Label>
+                            </ItemTemplate>
+                            <EditItemTemplate>
+                                <asp:TextBox ID="txtNombreD" runat="server" Text='<%# Bind("nombreDuenno") %>'></asp:TextBox>
+                                
+                            </EditItemTemplate>
+                        </asp:TemplateField>
+
+                        <asp:TemplateField HeaderText="Apellidos">
+                            <ItemTemplate>
+                                <asp:Label ID="lblApellidos" runat="server" Text='<%# Eval("apellidosDuenno") %>'></asp:Label>
+                            </ItemTemplate>
+                            <EditItemTemplate>
+                                <asp:TextBox ID="txtApellidosD" runat="server" Text='<%# Bind("apellidosDuenno") %>'></asp:TextBox>
+                                  
+
+                            </EditItemTemplate>
+                        </asp:TemplateField>
+
+                        <asp:TemplateField HeaderText="Teléfono">
+                            <ItemTemplate>
+                                <asp:Label ID="lblTelefono" runat="server" Text='<%# Eval("telefonoDuenno") %>'></asp:Label>
+                            </ItemTemplate>
+                            <EditItemTemplate>
+                                <asp:TextBox ID="txtTelefonoD" runat="server" Text='<%# Bind("telefonoDuenno") %>'></asp:TextBox>
+                                  <%-- <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Ingrese un correo elétronico válido" ControlToValidate="txtCorreo" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="#cc0000"></asp:RegularExpressionValidator> <%--Validacion para que lo que se ingreso en el campo sea con formato correcto--%>
+   
+                            </EditItemTemplate>
+                        </asp:TemplateField>
+                        
+
+                        <asp:TemplateField HeaderText="Correo eléctronic">
+                            <ItemTemplate>
+                                <asp:Label ID="lblCorreo" runat="server" Text='<%# Eval("correoDuenno") %>'></asp:Label>
+                            </ItemTemplate>
+                            <EditItemTemplate>
+                                <asp:TextBox ID="txtCorreoD" runat="server" Text='<%# Bind("correoDuenno") %>'></asp:TextBox>
+                                   <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Ingrese un correo elétronico válido" ControlToValidate="txtCorreoD" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="#cc0000"></asp:RegularExpressionValidator> <%--Validacion para que lo que se ingreso en el campo sea con formato correcto--%>
+                                   
+
+                            </EditItemTemplate>
+                        </asp:TemplateField>
+
+                
+                       </Columns>
+                </asp:GridView>
+            </td>
+        </tr>
             </div>
         </div>
 

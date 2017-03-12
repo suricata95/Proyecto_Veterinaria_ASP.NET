@@ -25,5 +25,20 @@ namespace WebService
             DuennoLogica duenno = new DuennoLogica();
             duenno.Nuevo(due);
         }
+
+        [WebMethod]
+        public List<DuennoEntidad> ObtenerTodosClientes()
+        {
+            DuennoLogica duenno = new DuennoLogica();
+            return duenno.ObtenerTodos();
+        }
+
+        [WebMethod]
+        public void modificarCliente(DuennoEntidad cli) //Modifica clientes
+        {
+            DuennoLogica duenno = new DuennoLogica();
+            duenno.Modificar(cli);
+        }
+
     }
 }
