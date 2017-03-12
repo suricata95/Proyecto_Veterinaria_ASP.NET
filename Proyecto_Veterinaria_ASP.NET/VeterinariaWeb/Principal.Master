@@ -17,7 +17,7 @@
 </head>
 <body>
     <script src="scripts/FuncionesMantenimientos.js"></script> <%--Validaciones de mantenimientos--%>
-    <asp:ContentPlaceHolder ID="ScriptContent" runat="server" />
+    <asp:ContentPlaceHolder ID="ScriptContent" runat="server"/>
 
     <form id="form1" runat="server">   
         <asp:ScriptManager ID="ScripManager1" runat="server"></asp:ScriptManager>

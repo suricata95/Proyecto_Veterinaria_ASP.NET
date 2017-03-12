@@ -31,7 +31,7 @@
         agregando a esa pagina enlaces para las paginas de insertar editar y eliminar --%>
     <%-- El formulario para editar sigue la misma logica --%>
     <%-- Este h2 para informar a cual mantenimiento pertenece --%>
-    <h2>Manejo de dueños</h2>
+    <h2>Manejo de clientes</h2>
     <div class="form-horizontal">
         <%-- Este h4 para informar cual acción esta realizando --%>
         <h4>Nuevo Dueño</h4>
