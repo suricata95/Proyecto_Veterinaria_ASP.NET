@@ -34,8 +34,8 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="Mantenimientos/NuevoPaciente.aspx">Nuevo paciente</a></li>
-                    <li><a href="Mantenimientos/NuevoDueño.aspx">Nuevo Dueño</a></li>                    
+                    <li><a href="../Mantenimientos/NuevoPaciente.aspx">Nuevo paciente</a></li>
+                    <li><a href="../Mantenimientos/NuevoDueño.aspx">Nuevo Dueño</a></li>                    
                 </ul>
             </div>
         </div>
