@@ -41,10 +41,17 @@ namespace WebService
         }
 
         //Pacientes
+        [WebMethod]
         public void insertarPaciente(PacientesEntidad pa)
         {
             PacienteLogica paciente = new PacienteLogica();
             paciente.Nuevo(pa);
+        }
+        [WebMethod]
+        public UsuariosEntidad obtieneUsuario (string usuario,string pass)
+        {
+            UsuarioLogica us = new UsuarioLogica();
+            return us.ObtieneUsuario(usuario, pass);
         }
     }
 }

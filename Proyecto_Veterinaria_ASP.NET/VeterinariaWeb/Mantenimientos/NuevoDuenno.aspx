@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="NuevoDueño.aspx.cs" Inherits="VeterinariaWeb.Dueño.NuevoDueño" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="NuevoDuenno.aspx.cs" Inherits="VeterinariaWeb.Dueño.NuevoDueño" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -39,8 +39,8 @@
          <div class="form-group">
             <asp:Label ID="Label9" runat="server" Text="Identificación" CssClass="control-label col-md-2"></asp:Label>
             <div class="col-md-10">
-                <asp:TextBox ID="txtDuennoID" runat="server" CssClass="form-control entrada" ></asp:TextBox>
-                <ajaxToolkit:MaskedEditExtender ID="mskDuennoID" Mask="9-9999-9999" runat="server" TargetControlID="txtDuennoID"/>
+                <asp:TextBox ID="txtDuennoID" runat="server" CssClass="form-control entrada" ></asp:TextBox>                
+               <ajaxToolkit:MaskedEditExtender ID="mskDuennoID" Mask="9-9999-9999" runat="server" TargetControlID="txtDuennoID" />
                  <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Ingrese su idenfiticación" ControlToValidate="txtDuennoID" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
                 
                 <%-- ReadOnly solo para que sea de LECTURA --%>

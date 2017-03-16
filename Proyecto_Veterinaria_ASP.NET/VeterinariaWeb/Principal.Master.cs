@@ -11,7 +11,14 @@ namespace VeterinariaWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["nombreUsuario"] != null)
+            {
+                Label2.Text = Session["nombreUsuario"].ToString();
+            }
+            else
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
     }
 }

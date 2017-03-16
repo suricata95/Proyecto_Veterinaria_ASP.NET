@@ -43,6 +43,7 @@
     <Compile Include="DuennoLogica.cs" />
     <Compile Include="PacienteLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioLogica.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VeterinariaDatos\VeterinariaDatos.csproj">

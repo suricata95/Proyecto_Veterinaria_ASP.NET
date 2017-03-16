@@ -18,7 +18,8 @@
     <div class="row">
         <div class="col-md-offset-5 col-md-7">
             <div class="form-login">
-            <h4>Welcome back.</h4>            
+            <h4>
+            <asp:Label ID="Label1" runat="server" Text="Bienvenido"></asp:Label></h4>            
             <input type="text" id="txtNombreUsuario" class="form-control input-sm chat-input" placeholder="Nombre de usuario" runat="server"/>
             <br />            
             <input type="password" id="txtContrasena" class="form-control input-sm chat-input" placeholder="password" runat="server"/>
