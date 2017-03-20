@@ -22,10 +22,15 @@
             }
             
         }
+
+       
     </script>
+
+  
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+   
     <%-- Pense que sería buena idea trabajar cada mantenimiento en carpetas tomando como principal de cada mantenimiento un listado y 
         agregando a esa pagina enlaces para las paginas de insertar editar y eliminar --%>
     <%-- El formulario para editar sigue la misma logica --%>
@@ -42,8 +47,7 @@
                 <%-- ReadOnly solo para que sea de LECTURA --%>
             </div>
         </div>
-
-
+        
         <div class="form-group">
 
             <asp:Label ID="Label1" runat="server" Text="Nombre" CssClass="control-label col-md-2"></asp:Label>
@@ -94,6 +98,8 @@
             </div>
         </div>
 
+        
+        
         <div class="form-group">
             <asp:Label ID="Label7" runat="server" Text=""  CssClass="control-label col-md-2">
                  <a href="../Filtros/FiltroDuenno.aspx" onclick="javascript:alert('Filtrar dueño del paciente');">Dueño</a>
@@ -102,10 +108,16 @@
             <div class="col-md-10">
                 <%-- Aqui estaria bueno hacer que el dueño se seleccione como en la aplicacion suya , abriendo otra pagina web pero pequeña o un datagrid
                     pero hay que investigar como hacerlo --%>
-                <asp:TextBox ID="txtDuennoID" runat="server" CssClass="form-control entrada" ></asp:TextBox>
-                <ajaxToolkit:MaskedEditExtender ID="mskDuennoID" Mask="9-9999-9999" runat="server" TargetControlID="txtDuennoID"/>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Click sobre 'Dueño' para filtrar el dueño" ControlToValidate="txtDuennoID" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                <asp:TextBox ID="txtDuennoID" runat="server" CssClass="form-control entrada"></asp:TextBox>
+                <asp:LinkButton ID="LinkButton1" runat="server" OnClick="btnBuscar_Click">Buscar</asp:LinkButton>
+                
+               <ajaxToolkit:MaskedEditExtender ID="mskDuennoID" Mask="9-9999-9999" runat="server" TargetControlID="txtDuennoID"/>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="filtrar el dueño" ControlToValidate="txtDuennoID" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                <asp:GridView runat="server" ID="grvDuennos" CssClass="col-md-10">
+
+                </asp:GridView>
             </div>
+            
         </div>
 
         <div class="form-group">

@@ -4,16 +4,15 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ScriptContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:GridView ID="GVFiltro" runat="server" AllowPaging="true" AllowSorting="true" AutoGenerateColumns="false" DataSourceID="SqlDataSource1">
-        <Columns>
-            <asp:BoundField DataField="Buscar" HeaderText="Buscar" SortExpression="Buscar" />
-        </Columns>
-    </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=localhost;Initial Catalog=DBVeterinaria;Persist Security Info=True;User ID=sa;Password=123456"SelectCommand="SELECT [campo_para_buscar], [el_resto_de_tus_datos] FROM [Tu_Tabla] WHERE ([campo_para_buscar] LIKE '%' + @campo_para_buscar+ '%')">
-        <SelectParameters>
-            <asp:ControlParameter ControlID="TextBox1" DefaultValue="%%" Name="campo_para_buscar" PropertyName="Text" Type="String" />
-        </SelectParameters>
-    </asp:SqlDataSource>
-</asp:Content>
+    <br />
+    <div class="form-group">
+        <asp:Label Text="Ingrese la cédula del cliente" ID="Label1" CssClass="form-control-static" runat="server" />
+        <asp:TextBox ID="txtFiltroCedula" runat="server" /> 
+        
+        <asp:Button Text="BUSCAR" ID="btnBuscar" runat="server" OnClick="btnBuscar_Click"/>
+         
+    </div>
+    <asp:GridView runat="server" ID="grvDuennos" OnSelectedIndexChanged="grvDuennos_SelectedIndexChanged">
 
-<add name="Default" connectionString=""/>
+    </asp:GridView>
+</asp:Content>

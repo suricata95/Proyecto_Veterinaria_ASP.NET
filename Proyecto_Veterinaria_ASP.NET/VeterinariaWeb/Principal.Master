@@ -20,7 +20,7 @@
     <asp:ContentPlaceHolder ID="ScriptContent" runat="server"/>
 
     <form id="form1" runat="server">   
-        <asp:ScriptManager ID="ScripManager1" runat="server"></asp:ScriptManager>
+        <asp:ScriptManager ID="ScripManager1" runat="server" EnablePageMethods="True"></asp:ScriptManager>
         <header>
          <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -35,7 +35,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="../Mantenimientos/NuevoPaciente.aspx">Nuevo paciente</a></li>
-                    <li><a href="../Mantenimientos/NuevoDueño.aspx">Nuevo Dueño</a></li>                    
+                    <li><a href="../Mantenimientos/NuevoDuenno.aspx">Nuevo Dueño</a></li>                    
                 </ul>
                 <div class="navbar-left navbar-text"> Bienvenido <asp:Label ID="Label2" runat="server" Text=""></asp:Label></div>
                
