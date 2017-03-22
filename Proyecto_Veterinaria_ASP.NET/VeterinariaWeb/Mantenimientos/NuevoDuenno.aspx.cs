@@ -14,7 +14,7 @@ namespace VeterinariaWeb.Dueño
         private WebServiceVeterinaria servicio = new WebServiceVeterinaria();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (!Page.IsPostBack)
             {
                 datosClientes();
             }
@@ -76,18 +76,34 @@ namespace VeterinariaWeb.Dueño
 
         protected void grvClientes_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
+
+
+
             DuennoEntidad dueno = new DuennoEntidad();
 
-            dueno.duennoID = Convert.ToInt32(grvClientes.DataKeys[e.RowIndex].Values[0]);
-            dueno.nombreDuenno = ((TextBox)grvClientes.Rows[e.RowIndex].FindControl("txtNombreD")).Text;
-            dueno.apellidosDuenno = ((TextBox)grvClientes.Rows[e.RowIndex].FindControl("txtApellidosD")).Text;
-            dueno.telefonoDuenno = ((TextBox)grvClientes.Rows[e.RowIndex].FindControl("txtTelefonoD")).Text;
-            dueno.correoDuenno = ((TextBox)grvClientes.Rows[e.RowIndex].FindControl("txtCorreoD")).Text;
+            //dueno.duennoID = (int)(grvClientes.DataKeys[e.RowIndex].Values[0]);
+            
+            dueno.duennoID = ((int)grvClientes.DataKeys[e.RowIndex].Value);
+           // dueno.duennoID = Convert.ToInt32(((TextBox)grvClientes.Rows[e.RowIndex].FindControl("duennoID")).Text);
+            dueno.nombreDuenno = ((TextBox)grvClientes.Rows[e.RowIndex].FindControl("nombreDuenno")).Text;
+            dueno.apellidosDuenno = ((TextBox)grvClientes.Rows[e.RowIndex].FindControl("apellidosDuenno")).Text;
+            dueno.telefonoDuenno = ((TextBox)grvClientes.Rows[e.RowIndex].FindControl("telefonoDuenno")).Text;
+            dueno.correoDuenno = ((TextBox)grvClientes.Rows[e.RowIndex].FindControl("correoDuenno")).Text;
             servicio.modificarCliente(dueno);
 
             grvClientes.EditIndex = -1;
             datosClientes();
 
+        }
+
+        protected void grvClientes_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            DuennoEntidad d = new DuennoEntidad();
+            d.duennoID = Convert.ToInt32(grvClientes.DataKeys[e.RowIndex].Values[0]);
+            servicio.eliminarCliente(d);
+            grvClientes.EditIndex = -1;
+            datosClientes();
+            
         }
     }
 }

@@ -43,5 +43,11 @@ namespace VeterinariaLogica
             DuennoDatos.Modificar(cli.duennoID, cli.nombreDuenno, cli.apellidosDuenno, cli.telefonoDuenno, cli.correoDuenno);
         }
 
+        public void Eliminar(DuennoEntidad cli)
+        {
+            DuennoDatos.Eliminar(cli.duennoID);
+            
+        }
+
     }
 }

@@ -40,6 +40,13 @@ namespace WebService
             duenno.Modificar(cli);
         }
 
+        [WebMethod]
+        public void eliminarCliente(DuennoEntidad cli)
+        {
+            DuennoLogica duenno = new DuennoLogica();
+            duenno.Eliminar(cli);
+        }
+
         //Pacientes
         [WebMethod]
         public void insertarPaciente(PacientesEntidad pa)

@@ -54,5 +54,17 @@ namespace VeterinariaDatos
             return ds;
         }
 
+        public static void Eliminar(int id)
+        {
+            Database db = DatabaseFactory.CreateDatabase("Default");
+            SqlCommand comando = new SqlCommand("usp_DELETE_Duenno_ByID");
+            comando.CommandType = CommandType.StoredProcedure;
+
+            comando.Parameters.AddWithValue("@duennoid", id);
+
+            db.ExecuteNonQuery(comando);
+
+        }
+
     }
 }
