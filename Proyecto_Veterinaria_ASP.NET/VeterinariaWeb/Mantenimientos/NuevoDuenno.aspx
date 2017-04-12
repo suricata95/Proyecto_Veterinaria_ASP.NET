@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="NuevoDuenno.aspx.cs" Inherits="VeterinariaWeb.Dueño.NuevoDueño" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 
@@ -87,7 +88,7 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <%--<asp:Button ID="btnNuevo" runat="server" Text="Nuevo" CssClass="btn btn-default" OnClick="btnNuevo_Click" OnClientClick="return ConfirmarIngreso();"/>--%>
-                <asp:Button ID="Button1" runat="server" Text="Nuevo" CssClass="btn btn-default" OnClick="btnNuevo_Click"/>
+                <asp:Button ID="btnNuevo" runat="server" Text="Nuevo" CssClass="btn btn-default" OnClick="btnNuevo_Click"/>
             </div>
         </div>
 
@@ -101,10 +102,13 @@
             <td colspan="2">
                 <h4>Clientes registrados</h4>
             </td>
-        </tr>
+                </tr>
         <tr>
-            <td colspan="2">
-                <asp:GridView ID="grvClientes" runat="server"
+            <t      d colspan="2">
+                <asp:UpdatePanel runat="server">
+                    <ContentTemplate>
+
+                        <asp:GridView ID="grvClientes" runat="server"
                     DataKeyNames="duennoID" 
                     AutoGenerateColumns="false"
                     AutoGenerateEditButton ="true"
@@ -158,7 +162,7 @@
                         </asp:TemplateField>
                         
 
-                        <asp:TemplateField HeaderText="Correo eléctronic">
+                        <asp:TemplateField HeaderText="Correo eléctronico">
                             <ItemTemplate>
                                 <asp:Label ID="lblCorreo" runat="server" Text='<%# Eval("correoDuenno") %>'></asp:Label>
                             </ItemTemplate>
@@ -169,10 +173,16 @@
                             </EditItemTemplate>
                         </asp:TemplateField>
 
-                
                        </Columns>
                 </asp:GridView>
-            </td>
+
+                    </ContentTemplate>
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="btnNuevo" EventName="Click" />
+                    </Triggers>
+                </asp:UpdatePanel>
+
+            </t>
         </tr>
             </div>
         </div>

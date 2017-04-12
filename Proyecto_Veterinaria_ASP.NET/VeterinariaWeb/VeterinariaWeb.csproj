@@ -77,6 +77,7 @@
     <Content Include="Mantenimientos\NuevoDuenno.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Mantenimientos\NuevoPaciente.aspx" />
+    <Content Include="Mantenimientos\NuevoTratamiento.aspx" />
     <Content Include="packages.config" />
     <Content Include="Principal.Master" />
     <None Include="Web.Debug.config">
@@ -128,6 +129,13 @@
     </Compile>
     <Compile Include="Mantenimientos\NuevoPaciente.aspx.designer.cs">
       <DependentUpon>NuevoPaciente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\NuevoTratamiento.aspx.cs">
+      <DependentUpon>NuevoTratamiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\NuevoTratamiento.aspx.designer.cs">
+      <DependentUpon>NuevoTratamiento.aspx</DependentUpon>
     </Compile>
     <Compile Include="Principal.Master.cs">
       <DependentUpon>Principal.Master</DependentUpon>

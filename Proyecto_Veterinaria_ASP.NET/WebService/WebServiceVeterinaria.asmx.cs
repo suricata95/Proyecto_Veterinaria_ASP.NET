@@ -54,6 +54,65 @@ namespace WebService
             PacienteLogica paciente = new PacienteLogica();
             paciente.Nuevo(pa);
         }
+
+        [WebMethod]
+        public void modificarPaciente(PacientesEntidad pa) //Modifica clientes
+        {
+            PacienteLogica paciente = new PacienteLogica();
+            paciente.Modificar(pa);
+        }
+
+        [WebMethod]
+        public void eliminarPaciente(PacientesEntidad pa)
+        {
+            PacienteLogica paciente = new PacienteLogica();
+            paciente.Eliminar(pa);
+            
+        }
+
+        [WebMethod]
+        public List<PacientesEntidad> ObtenerTodosPacientes()
+        {
+            PacienteLogica paciente = new PacienteLogica();
+            return paciente.ObtenerTodos();
+        }
+
+
+        //Tratamientos
+        [WebMethod]
+        public void insertarTratamiento(TratamientosEntidad tra)
+        {
+           TratamientoLogica tratamiento = new TratamientoLogica();
+            tratamiento.Nuevo(tra);
+        }
+
+        [WebMethod]
+        public void modificarTratamiento(TratamientosEntidad tra) //Modifica clientes
+        {
+            TratamientoLogica tratamiento = new TratamientoLogica();
+            tratamiento.Modificar(tra);
+        }
+
+        [WebMethod]
+        public void eliminarTratamiento(TratamientosEntidad tra)
+        {
+            TratamientoLogica tratamiento = new TratamientoLogica();
+            tratamiento.Eliminar(tra);
+
+        }
+
+        [WebMethod]
+        public List<TratamientosEntidad> ObtenerTodosTratamientos()
+        {
+            TratamientoLogica tratamiento = new TratamientoLogica();
+            return tratamiento.ObtenerTodos();
+        }
+
+
+
+
+
+
         [WebMethod]
         public UsuariosEntidad obtieneUsuario (string usuario,string pass)
         {

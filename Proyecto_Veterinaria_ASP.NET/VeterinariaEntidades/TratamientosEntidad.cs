@@ -12,5 +12,8 @@ namespace VeterinariaEntidades
         public int pacienteID { get; set; }
         public string descripcionTratamiento { get; set; }
 
+        public string nombrePaciente { get; set; }
+
+
     }
 }

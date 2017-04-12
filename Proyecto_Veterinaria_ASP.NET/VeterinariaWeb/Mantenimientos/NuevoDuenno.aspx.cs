@@ -40,6 +40,7 @@ namespace VeterinariaWeb.Dueño
                 
             }
             servicio.insertarDuenno(duennoW);
+            datosClientes(); //Actualizar los clientes en el grid view
             LimpiarRegistro(); //Limpia los campos una vez ingresado el objeto
             String mensaje = @"alert('Datos guardados correctamente')";
             ScriptManager.RegisterStartupScript(this, typeof(Page), "Informacion", mensaje, true);
@@ -76,9 +77,6 @@ namespace VeterinariaWeb.Dueño
 
         protected void grvClientes_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-
-
-
             DuennoEntidad dueno = new DuennoEntidad();
 
             //dueno.duennoID = (int)(grvClientes.DataKeys[e.RowIndex].Values[0]);
