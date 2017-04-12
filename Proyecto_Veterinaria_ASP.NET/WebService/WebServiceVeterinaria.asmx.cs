@@ -109,8 +109,35 @@ namespace WebService
         }
 
 
+        //Medicamentos
+        [WebMethod]
+        public void insertarMedicamento(MedicamentosEntidad me)
+        {
+            MedicamentoLogica medicamento = new MedicamentoLogica();
+            medicamento.Nuevo(me);
+        }
 
+        [WebMethod]
+        public void modificarMedicamento(MedicamentosEntidad me) //Modifica clientes
+        {
+            MedicamentoLogica medicamento = new MedicamentoLogica();
+            medicamento.Modificar(me);
+        }
 
+        [WebMethod]
+        public void eliminarMedicamento(MedicamentosEntidad me)
+        {
+            MedicamentoLogica medicamento = new MedicamentoLogica();
+            medicamento.Eliminar(me);
+
+        }
+
+        [WebMethod]
+        public List<MedicamentosEntidad> ObtenerTodosMedicamentos()
+        {
+            MedicamentoLogica medicamento = new MedicamentoLogica();
+            return medicamento.ObtenerTodos();
+        }
 
 
         [WebMethod]

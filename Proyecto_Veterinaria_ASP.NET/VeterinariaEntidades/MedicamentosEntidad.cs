@@ -12,7 +12,9 @@ namespace VeterinariaEntidades
         public string nombreMedicamento { get; set; }
         public DateTime fechaVencimiento { get; set; }
         public int pacienteID { get; set; }
-        public  int dosis { get; set; }
+        public  string dosis { get; set; }
+
+        public string nombrePaciente { get; set; }
 
     }
 }

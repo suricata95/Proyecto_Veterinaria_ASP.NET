@@ -74,8 +74,10 @@
     <Content Include="css\formulario.css" />
     <Content Include="css\Login.css" />
     <Content Include="Filtros\FiltroDuenno.aspx" />
+    <Content Include="img\calendar.png" />
     <Content Include="Mantenimientos\NuevoDuenno.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Mantenimientos\NuevoMedicamento.aspx" />
     <Content Include="Mantenimientos\NuevoPaciente.aspx" />
     <Content Include="Mantenimientos\NuevoTratamiento.aspx" />
     <Content Include="packages.config" />
@@ -123,6 +125,13 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\NuevoMedicamento.aspx.cs">
+      <DependentUpon>NuevoMedicamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\NuevoMedicamento.aspx.designer.cs">
+      <DependentUpon>NuevoMedicamento.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\NuevoPaciente.aspx.cs">
       <DependentUpon>NuevoPaciente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -146,9 +155,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="img\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\VeterinariaEntidades\VeterinariaEntidades.csproj">
       <Project>{97885e13-2393-4b92-8324-56b11b9b95f0}</Project>

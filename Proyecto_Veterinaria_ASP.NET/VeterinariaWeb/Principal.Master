@@ -36,7 +36,8 @@
                 <ul class="nav navbar-nav">
                     <li><a href="../Mantenimientos/NuevoPaciente.aspx">Nuevo paciente</a></li>
                     <li><a href="../Mantenimientos/NuevoDuenno.aspx">Nuevo Dueño</a></li>
-                    <li><a href="../Mantenimientos/NuevoTratamiento.aspx">Nuevo Tratamiento</a></li>                    
+                    <li><a href="../Mantenimientos/NuevoTratamiento.aspx">Nuevo Tratamiento</a></li>  
+                    <li><a href="../Mantenimientos/NuevoMedicamento.aspx">Nuevo Medicamento</a></li>                    
                 </ul>
                 <div class="navbar-left navbar-text"> Bienvenido <asp:Label ID="Label2" runat="server" Text=""></asp:Label></div>
                
