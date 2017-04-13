@@ -17,7 +17,7 @@ namespace VeterinariaLogica
             TratamientosDatos.InsertarTratamientos(t.pacienteID, t.descripcionTratamiento);
         }
 
-        //Listar todos los clientes
+        //Listar todos los tratamientos
         public List<TratamientosEntidad> ObtenerTodos()
         {
             List<TratamientosEntidad> lista = new List<TratamientosEntidad>();
@@ -37,7 +37,7 @@ namespace VeterinariaLogica
             return lista;
         }
 
-        //Modificar un cliente
+        //Modificar tratamientos
         public void Modificar(TratamientosEntidad tra)
         {
             TratamientosDatos.Modificar(tra.tratamientoID, tra.pacienteID, tra.descripcionTratamiento);

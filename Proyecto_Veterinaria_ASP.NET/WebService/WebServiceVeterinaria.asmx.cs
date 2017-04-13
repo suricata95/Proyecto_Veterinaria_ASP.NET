@@ -139,6 +139,41 @@ namespace WebService
             return medicamento.ObtenerTodos();
         }
 
+        //Citas
+        [WebMethod]
+        public void insertarCitas(CitasEntidad c)
+        {
+            CitaLogica cita = new CitaLogica();
+            cita.Nuevo(c);
+        }
+
+        [WebMethod]
+        public void modificarCitas(CitasEntidad c) //Modifica citas
+        {
+            CitaLogica cita = new CitaLogica();
+            cita.Modificar(c);
+        }
+
+        [WebMethod]
+        public void eliminarCitas(CitasEntidad c)
+        {
+            CitaLogica cita = new CitaLogica();
+            cita.Eliminar(c);
+
+        }
+
+        [WebMethod]
+        public List<CitasEntidad> ObtenerTodosCitas()
+        {
+            CitaLogica cita = new CitaLogica();
+            return cita.ObtenerTodos();
+        }
+
+
+
+
+
+
 
         [WebMethod]
         public UsuariosEntidad obtieneUsuario (string usuario,string pass)

@@ -73,7 +73,10 @@
     <Content Include="Bienvenida.aspx" />
     <Content Include="css\formulario.css" />
     <Content Include="css\Login.css" />
+    <Content Include="css\menu.css" />
     <Content Include="Filtros\FiltroDuenno.aspx" />
+    <Content Include="Iconos\icomoon.svg" />
+    <Content Include="Iconos\style.css" />
     <Content Include="img\calendar.png" />
     <Content Include="Mantenimientos\NuevoDuenno.aspx" />
     <Content Include="Login.aspx" />
@@ -82,6 +85,9 @@
     <Content Include="Mantenimientos\NuevoTratamiento.aspx" />
     <Content Include="packages.config" />
     <Content Include="Principal.Master" />
+    <Content Include="Iconos\icomoon.eot" />
+    <Content Include="Iconos\icomoon.ttf" />
+    <Content Include="Iconos\icomoon.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -91,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\bootstrap.css" />
+    <Content Include="Procesos\ProcesoCitas.aspx" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\FuncionesMantenimientos.js" />
     <Content Include="scripts\jquery-3.1.1.js" />
@@ -152,6 +159,13 @@
     </Compile>
     <Compile Include="Principal.Master.designer.cs">
       <DependentUpon>Principal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\ProcesoCitas.aspx.cs">
+      <DependentUpon>ProcesoCitas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Procesos\ProcesoCitas.aspx.designer.cs">
+      <DependentUpon>ProcesoCitas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

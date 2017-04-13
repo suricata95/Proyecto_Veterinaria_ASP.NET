@@ -9,49 +9,73 @@
     </asp:ContentPlaceHolder>
     <script src="scripts/jquery-3.1.1.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/formulario.css" rel="stylesheet" />     
+    <link href="css/formulario.css" rel="stylesheet" />
     <script src="scripts/bootstrap.js"></script>
-    
+    <link href="css/menu.css" rel="stylesheet" />
+    <link href="Iconos/style.css" rel="stylesheet" />
 
 
 </head>
 <body>
-    <script src="scripts/FuncionesMantenimientos.js"></script> <%--Validaciones de mantenimientos--%>
-    <asp:ContentPlaceHolder ID="ScriptContent" runat="server"/>
+    <script src="scripts/FuncionesMantenimientos.js"></script>
+    <%--Validaciones de mantenimientos--%>
+    <asp:ContentPlaceHolder ID="ScriptContent" runat="server" />
 
-    <form id="form1" runat="server">   
+    <form id="form1" runat="server">
         <asp:ScriptManager ID="ScripManager1" runat="server" EnablePageMethods="True"></asp:ScriptManager>
         <header>
-         <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <asp:Label ID="Label1" runat="server" Text="Veterinaria" CssClass="navbar-brand"></asp:Label>               
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <asp:Label ID="Label1" runat="server" Text="Veterinaria" CssClass="navbar-brand"></asp:Label>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <%--<ul class="nav navbar-nav">
                     <li><a href="../Mantenimientos/NuevoPaciente.aspx">Nuevo paciente</a></li>
                     <li><a href="../Mantenimientos/NuevoDuenno.aspx">Nuevo Dueño</a></li>
                     <li><a href="../Mantenimientos/NuevoTratamiento.aspx">Nuevo Tratamiento</a></li>  
                     <li><a href="../Mantenimientos/NuevoMedicamento.aspx">Nuevo Medicamento</a></li>                    
-                </ul>
-                <div class="navbar-left navbar-text"> Bienvenido <asp:Label ID="Label2" runat="server" Text=""></asp:Label></div>
-               
+                </ul>--%>
+                        <ul id="menu-bar" class="nav navbar-nav">
+                            <%--<li class="active"><a href="#">Veterinaria</a></li>--%>
+                            <li><a href="#">Mantenimientos</a>
+                                <ul>
+                                    <li><a href="../Mantenimientos/NuevoPaciente.aspx">Pacientes</a></li>
+                                    <li><a href="../Mantenimientos/NuevoDuenno.aspx">Clientes</a></li>
+                                    <li><a href="../Mantenimientos/NuevoTratamiento.aspx">Tratamientos</a></li>
+                                    <li><a href="../Mantenimientos/NuevoMedicamento.aspx">Medicamentos</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Procesos</a>
+                                <ul>
+                                    <li><a href="../Procesos/ProcesoCitas.aspx">Nueva Cita</a></li>
+                                    <li><a href="#">Services Sub Menu 2</a></li>
+                                    <li><a href="#">Services Sub Menu 3</a></li>
+                                    <li><a href="#">Services Sub Menu 4</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Reportes</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                        <div class="navbar-left navbar-text">Bienvenido
+                            <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
         </header>
 
-      
-    <div class="container body-content">    
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
     </form>
 </body>
 </html>
