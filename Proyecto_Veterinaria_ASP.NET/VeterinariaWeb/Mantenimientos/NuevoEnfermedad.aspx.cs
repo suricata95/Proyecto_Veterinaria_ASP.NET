@@ -59,7 +59,7 @@ namespace VeterinariaWeb.Mantenimientos
         {
             EnfermedadesEntidad enfer = new EnfermedadesEntidad();
             if (Page.IsPostBack && IsValid)
-            {
+            {//iuh
                 enfer.nombreEnfermedad = txtNombreEnfermedad.Text;
                 enfer.pacienteID = Convert.ToInt32(txtPacienteID.Text.ToString());
                 enfer.sintomasEnfermedad = txtSintomas.Text;
