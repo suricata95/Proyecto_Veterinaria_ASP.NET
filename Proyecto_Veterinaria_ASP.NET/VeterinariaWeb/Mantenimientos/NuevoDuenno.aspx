@@ -5,25 +5,7 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="ScriptContent" runat="server">
-    <script type="text/javascript">
-        function ConfirmarIngreso() {
-            //var mensaje1 = alert("Ingrese primero los datos");
-            
-            //if (mensaje1) {
-            //    location.href = "NuevoDueño.aspx";
-            //}            
-                var mensaje1 = confirm("¿Desea completar el ingreso?");
-                if (mensaje1) {
-                    alert("Datos ingresados");
-                } else {
-                    alert("Se canceló el ingreso de datos");
-                    event.preventDefault(); //Con esto se evita que se inserte, dandole click en cancelar.
-                    return location.href = "NuevoDueño.aspx";
-                
-            }
-            
-        }
-    </script>
+    
 </asp:Content>
 <%@ Register TagPrefix="ajaxToolkit" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit" %>
 

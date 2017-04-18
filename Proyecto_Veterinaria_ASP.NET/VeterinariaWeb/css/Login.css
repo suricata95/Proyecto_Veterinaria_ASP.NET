@@ -1,7 +1,8 @@
 ﻿body {
-  background-color:#fff;
-  -webkit-font-smoothing: antialiased;
-  font: normal 14px Roboto,arial,sans-serif;
+    font: normal 14px Roboto,arial,sans-serif;
+    background-image: url('../img/cachorros-boxer-fca-puros-D_NQ_NP_956621-MLA20808831108_072016-F2.jpg') ;
+    background-repeat:no-repeat;
+    background-size:cover;   
 }
 
 .container {

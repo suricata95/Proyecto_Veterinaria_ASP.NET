@@ -45,26 +45,43 @@
                             <%--<li class="active"><a href="#">Veterinaria</a></li>--%>
                             <li><a href="#">Mantenimientos</a>
                                 <ul>
-                                    <li><a href="../Mantenimientos/NuevoPaciente.aspx">Pacientes</a></li>
+                                    <%--administrador 1 acceso total
+                                        medico 2 reg datos expediente y ingresar dosis medicamentos
+                                        enfermero 3 reg pacientes , agregar resultados examenes , ingresar citas
+                                        todos pueden ver reportes  --%>
+                                    <%switch (Convert.ToInt16(Session["perfilUsuario"]))
+                                        {
+                                            case 1:Response.Write("<li><a href=\"../Mantenimientos/NuevoPaciente.aspx\">Pacientes</a></li><li><a href=\"../Mantenimientos/NuevoDuenno.aspx\">Clientes</a></li><li><a href=\"../Mantenimientos/NuevoTratamiento.aspx\">Tratamientos</a></li><li><a href=\"../Mantenimientos/NuevoMedicamento.aspx\">Medicamentos</a></li><li><a href=\"../Mantenimientos/NuevoEnfermedad.aspx\">Enfermedades</a></li>");
+                                                break;
+                                            case 2:Response.Write("<li><a href=\"../Mantenimientos/NuevoMedicamento.aspx\">Medicamentos</a></li>");
+                                                break;
+                                            case 3:Response.Write("<li><a href=\"../Mantenimientos/NuevoPaciente.aspx\">Pacientes</a></li>");
+                                                break;
+
+                                        }%>
+                                    <%--<li><a href="../Mantenimientos/NuevoPaciente.aspx">Pacientes</a></li>
                                     <li><a href="../Mantenimientos/NuevoDuenno.aspx">Clientes</a></li>
                                     <li><a href="../Mantenimientos/NuevoTratamiento.aspx">Tratamientos</a></li>
                                     <li><a href="../Mantenimientos/NuevoMedicamento.aspx">Medicamentos</a></li>
-                                    <li><a href="../Mantenimientos/NuevoEnfermedad.aspx">Enfermedades</a></li>
+                                    <li><a href="../Mantenimientos/NuevoEnfermedad.aspx">Enfermedades</a></li>--%>
                                 </ul>
                             </li>
                             <li><a href="#">Procesos</a>
                                 <ul>
-                                    <li><a href="../Procesos/ProcesoCitas.aspx">Nueva Cita</a></li>
-                                    <li><a href="#">Services Sub Menu 2</a></li>
-                                    <li><a href="#">Services Sub Menu 3</a></li>
-                                    <li><a href="#">Services Sub Menu 4</a></li>
+                                    <%if (Convert.ToInt16(Session["perfilUsuario"])==1 || Convert.ToInt16(Session["perfilUsuario"])==2 )
+                                        {
+                                            Response.Write("<li><a href=\"../Procesos/ProcesoCitas.aspx\">Nueva Cita</a></li>");
+                                        } %>
+                                    <%--<li><a href="../Procesos/ProcesoCitas.aspx">Nueva Cita</a></li>
+                                    <li><a href="#">Services Sub Menu 2</a></li>  --%>                                  
                                 </ul>
                             </li>
-                            <li><a href="#">Reportes</a></li>
-                            <li><a href="#">Contacto</a></li>
+                            <li><a href="#">Reportes</a></li>                            
                         </ul>
                         <div class="navbar-left navbar-text">Bienvenido
                             <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
+                            <a href="Salir.aspx" >Cerrar Sesión</a>
+                            <
                         </div>
 
                     </div>
