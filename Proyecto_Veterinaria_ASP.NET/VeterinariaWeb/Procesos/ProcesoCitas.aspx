@@ -8,7 +8,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <h2>Manejo de tratamientos</h2>
+    <h2>Manejo de Citas</h2>
     <div class="form-horizontal">
         <%-- Este h4 para informar cual acción esta realizando --%>
         <h4>Generar Citas</h4>   
@@ -17,9 +17,9 @@
             <asp:Label ID="Label1" runat="server" Text="Fecha Cita" CssClass="control-label col-md-2"></asp:Label>
             <div class="col-md-10">
                 <asp:TextBox ID="txtFechaCita" runat="server" CssClass="form-control entrada" placeholder="Fecha Cita"></asp:TextBox>
-                <ajaxToolkit:CalendarExtender runat="server" Format="dd/MM/yyyy" PopupButtonID="ImageButton1" BehaviorID="txtFecha_CalendarExtender"
-                    TargetControlID="txtFechaCita" ID="txtFecha_CalendarExtender"> </ajaxToolkit:CalendarExtender>
-                <asp:Image ID="ImageButton1" ImageUrl="~/img/calendar.png" runat="server" AlternateText="Fecha" ImageAlign="Left"/>
+                <ajaxToolkit:CalendarExtender runat="server" Format="dd/MM/yyyy" PopupButtonID="ImageButton" BehaviorID="txtFecha_CalendarExt"
+                    TargetControlID="txtFechaCita" ID="txtFecha_CalendarExt"> </ajaxToolkit:CalendarExtender>
+                <asp:Image ID="ImageButton" ImageUrl="~/img/calendar.png" runat="server" AlternateText="Fecha" ImageAlign="Left"/>
                  <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Ingrese la fecha de la cita" ControlToValidate="txtFechaCita" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
             </div>
         </div>
@@ -42,9 +42,13 @@
             </div>
         </div>
 
+
+
+      
+
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <%--<asp:Button ID="btnNuevo" runat="server" Text="Nuevo" CssClass="btn btn-default" OnClick="btnNuevo_Click" OnClientClick="return ConfirmarIngreso();"/>--%>
+                
                 <asp:Button ID="btnNuevo" runat="server" Text="Nuevo" CssClass="btn btn-default" OnClick="btnNuevo_Click"/>
             </div>
         </div>
@@ -109,18 +113,18 @@
                                 <asp:Label ID="lblNombrePaciente" runat="server" Text='<%# Eval("nombrePaciente") %>'></asp:Label>
                             </ItemTemplate>
                             <EditItemTemplate>
-                                <asp:TextBox ID="nombrePaciente" runat="server" Text='<%# Bind("nombrePaciente") %>'></asp:TextBox>
+                                <asp:TextBox ID="nombrePaciente" runat="server" Text='<%# Bind("nombrePaciente") %>' ReadOnly="true"></asp:TextBox>
                             </EditItemTemplate>
                         </asp:TemplateField>
                         
-                         <asp:TemplateField HeaderText="Nombre Dueño">
+                       <%--  <asp:TemplateField HeaderText="Nombre Dueño">
                             <ItemTemplate>
                                 <asp:Label ID="lblNombreDueño" runat="server" Text='<%# Eval("nombreDuenno") %>'></asp:Label>
                             </ItemTemplate>
                             <EditItemTemplate>
                                 <asp:TextBox ID="nombreDuenno" runat="server" Text='<%# Bind("nombreDuenno") %>'></asp:TextBox>
                             </EditItemTemplate>
-                        </asp:TemplateField>
+                        </asp:TemplateField>--%>
                         
 
                        </Columns>

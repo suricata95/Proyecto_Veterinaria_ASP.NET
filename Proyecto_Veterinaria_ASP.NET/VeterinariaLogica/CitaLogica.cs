@@ -32,7 +32,7 @@ namespace VeterinariaLogica
                 cEntidad.fechaCita = Convert.ToDateTime(row["Fecha"].ToString());
                 cEntidad.pacienteID = Convert.ToInt32(row["PacienteID"].ToString());
                 cEntidad.descripcionCita = row["Descripcion"].ToString();
-                cEntidad.nombreDuenno = row["nombreDuenno"].ToString(); //se agregua este atributo para mostrarlo en el grid view
+                //cEntidad.nombreDuenno = row["nombreDuenno"].ToString(); //se agregua este atributo para mostrarlo en el grid view
                 cEntidad.nombrePaciente = row["nombrePaciente"].ToString(); // se agrega este atributo para mostrarlo en el grid view
                 lista.Add(cEntidad);
             }

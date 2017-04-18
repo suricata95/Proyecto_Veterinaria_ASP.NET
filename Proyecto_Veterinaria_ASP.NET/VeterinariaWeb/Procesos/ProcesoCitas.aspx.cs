@@ -32,7 +32,7 @@ namespace VeterinariaWeb.Procesos
             CitasEntidad cEntidad = new CitasEntidad();
             if (Page.IsPostBack && IsValid)
             {
-                cEntidad.fechaCita = Convert.ToDateTime(txtFechaCita.Text.ToString());
+                cEntidad.fechaCita = Convert.ToDateTime(txtFechaCita.Text);
                 cEntidad.pacienteID = Convert.ToInt32(txtPacienteID.Text.ToString());
                 cEntidad.descripcionCita = txtDescripcion.Text;
             }

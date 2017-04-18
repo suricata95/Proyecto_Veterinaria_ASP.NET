@@ -45,6 +45,8 @@
     <Compile Include="Database.cs" />
     <Compile Include="DatabaseFactory.cs" />
     <Compile Include="DuennoDatos.cs" />
+    <Compile Include="EnfermedadesDatos.cs" />
+    <Compile Include="FacturaDatos.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="MedicamentosDatos.cs" />
     <Compile Include="PacienteDatos.cs" />

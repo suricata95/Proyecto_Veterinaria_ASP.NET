@@ -169,7 +169,35 @@ namespace WebService
             return cita.ObtenerTodos();
         }
 
+        //Enfermedades
+        [WebMethod]
+        public void insertarEnfermedades(EnfermedadesEntidad enf)
+        {
+            EnfermedadLogica enfermedad = new EnfermedadLogica();
+            enfermedad.Nuevo(enf);
+        }
 
+        [WebMethod]
+        public void modificarEnfermedades(EnfermedadesEntidad enf) //Modifica enfermedades
+        {
+            EnfermedadLogica enfermedad = new EnfermedadLogica();
+            enfermedad.Modificar(enf);
+        }
+
+        [WebMethod]
+        public void eliminarEnfermedades(EnfermedadesEntidad enf)
+        {
+            EnfermedadLogica enfermedad = new EnfermedadLogica();
+            enfermedad.Eliminar(enf);
+
+        }
+
+        [WebMethod]
+        public List<EnfermedadesEntidad> ObtenerTodosEnfermedades()
+        {
+            EnfermedadLogica enfermedad = new EnfermedadLogica();
+            return enfermedad.ObtenerTodos();
+        }
 
 
 

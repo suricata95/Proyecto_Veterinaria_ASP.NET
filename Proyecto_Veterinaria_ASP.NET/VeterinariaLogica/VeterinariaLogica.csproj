@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CitaLogica.cs" />
     <Compile Include="DuennoLogica.cs" />
+    <Compile Include="EnfermedadLogica.cs" />
     <Compile Include="MedicamentoLogica.cs" />
     <Compile Include="PacienteLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

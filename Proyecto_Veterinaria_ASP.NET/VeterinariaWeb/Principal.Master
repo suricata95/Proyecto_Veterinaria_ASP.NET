@@ -49,6 +49,7 @@
                                     <li><a href="../Mantenimientos/NuevoDuenno.aspx">Clientes</a></li>
                                     <li><a href="../Mantenimientos/NuevoTratamiento.aspx">Tratamientos</a></li>
                                     <li><a href="../Mantenimientos/NuevoMedicamento.aspx">Medicamentos</a></li>
+                                    <li><a href="../Mantenimientos/NuevoEnfermedad.aspx">Enfermedades</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Procesos</a>

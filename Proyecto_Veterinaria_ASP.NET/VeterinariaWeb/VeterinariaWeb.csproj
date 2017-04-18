@@ -80,6 +80,7 @@
     <Content Include="img\calendar.png" />
     <Content Include="Mantenimientos\NuevoDuenno.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Mantenimientos\NuevoEnfermedad.aspx" />
     <Content Include="Mantenimientos\NuevoMedicamento.aspx" />
     <Content Include="Mantenimientos\NuevoPaciente.aspx" />
     <Content Include="Mantenimientos\NuevoTratamiento.aspx" />
@@ -131,6 +132,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\NuevoEnfermedad.aspx.cs">
+      <DependentUpon>NuevoEnfermedad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\NuevoEnfermedad.aspx.designer.cs">
+      <DependentUpon>NuevoEnfermedad.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\NuevoMedicamento.aspx.cs">
       <DependentUpon>NuevoMedicamento.aspx</DependentUpon>
