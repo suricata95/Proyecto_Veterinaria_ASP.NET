@@ -7,9 +7,9 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <script src="scripts/jquery-3.1.1.js"></script>
-    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="scripts/jquery-3.1.1.js"></script>    
     <link href="css/formulario.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
     <script src="scripts/bootstrap.js"></script>
     <link href="css/menu.css" rel="stylesheet" />
     <link href="Iconos/style.css" rel="stylesheet" />
@@ -81,16 +81,16 @@
                         <div class="navbar-left navbar-text">Bienvenido
                             <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
                             <a href="Salir.aspx" >Cerrar Sesión</a>
-                            <
+                            
                         </div>
 
                     </div>
                 </div>
             </div>
-        </header>
-
-
-        <div class="container body-content">
+        </header>        
+        
+        <div class="col-md-8 container body-content">
+            
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>

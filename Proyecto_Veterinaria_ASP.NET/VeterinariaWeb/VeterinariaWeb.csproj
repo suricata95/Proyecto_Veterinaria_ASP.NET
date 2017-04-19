@@ -79,6 +79,7 @@
     <Content Include="Iconos\style.css" />
     <Content Include="img\cachorros-boxer-fca-puros-D_NQ_NP_956621-MLA20808831108_072016-F2.jpg" />
     <Content Include="img\calendar.png" />
+    <Content Include="img\cf_buscandohuellas-03.png" />
     <Content Include="Mantenimientos\NuevoDuenno.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Mantenimientos\NuevoEnfermedad.aspx" />
