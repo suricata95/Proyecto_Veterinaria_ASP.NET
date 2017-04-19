@@ -60,7 +60,7 @@
             <div class="col-md-10">
                 <%-- Copie todas las clases de css para cada etiqueta , por ejemplo si quita la etiqueta "entrada" el textbox queda del ancho de la pantalla --%>
                  <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control entrada"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Ingrese nombre del paciente" ControlToValidate="txtNombre" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ValidationGroup="validar" ErrorMessage="Ingrese nombre del paciente" ControlToValidate="txtNombre" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
             </div>
         </div>
         <%-- Y aquí termina el maquetado, los otros controles es seguir la misma logica --%>
@@ -68,7 +68,7 @@
             <asp:Label ID="Label2" runat="server" Text="Edad" CssClass="control-label col-md-2"></asp:Label>
             <div class="col-md-10">
                 <asp:TextBox ID="txtEdad" TextMode="Number" runat="server" CssClass="form-control entrada"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Ingrese la edad" ControlToValidate="txtEdad" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ValidationGroup="validar" ErrorMessage="Ingrese la edad" ControlToValidate="txtEdad" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
             </div>
         </div>
 
@@ -76,7 +76,7 @@
             <asp:Label ID="Label3" runat="server" Text="Peso" CssClass="control-label col-md-2"></asp:Label>
             <div class="col-md-10">
                 <asp:TextBox ID="txtPeso" TextMode="Number" runat="server" CssClass="form-control entrada"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Ingrese el peso" ControlToValidate="txtPeso" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ValidationGroup="validar" ErrorMessage="Ingrese el peso" ControlToValidate="txtPeso" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
             </div>
         </div>
 
@@ -84,7 +84,7 @@
             <asp:Label ID="Label4" runat="server" Text="Especie" CssClass="control-label col-md-2"></asp:Label>
             <div class="col-md-10">
                 <asp:TextBox ID="txtEspecie" runat="server" CssClass="form-control entrada"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Ingrese la especie del paciente" ControlToValidate="txtEspecie" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ValidationGroup="validar" ErrorMessage="Ingrese la especie del paciente" ControlToValidate="txtEspecie" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
             </div>
         </div>
 
@@ -92,7 +92,7 @@
             <asp:Label ID="Label5" runat="server" Text="Raza" CssClass="control-label col-md-2"></asp:Label>
             <div class="col-md-10">
                 <asp:TextBox ID="txtRaza" runat="server" CssClass="form-control entrada"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Ingrese la raza del paciente" ControlToValidate="txtRaza" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ValidationGroup="validar" ErrorMessage="Ingrese la raza del paciente" ControlToValidate="txtRaza" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
             </div>
         </div>
 
@@ -100,7 +100,7 @@
             <asp:Label ID="Label6" runat="server" Text="Color" CssClass="control-label col-md-2"></asp:Label>
             <div class="col-md-10">
                 <asp:TextBox ID="txtColor" runat="server" CssClass="form-control entrada"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Ingrese el color del paciente" ControlToValidate="txtColor" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ValidationGroup="validar" ErrorMessage="Ingrese el color del paciente" ControlToValidate="txtColor" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
             </div>
         </div>
 
@@ -118,8 +118,8 @@
                 <asp:TextBox ID="txtDuennoID" runat="server" CssClass="form-control entrada" OnTextChanged="btnBuscar_Click" AutoPostBack="true"></asp:TextBox>
                 <br/>
                  <ajaxToolkit:MaskedEditExtender ID="mskDuennoID" Mask="9-9999-9999" runat="server" TargetControlID="txtDuennoID"/>
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Dígite la cédula con 9 dígitos" ControlToValidate="txtDuennoID" ValidationExpression="^\d{9}$" ForeColor="#ff0000"></asp:RegularExpressionValidator>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Debe buscar el cliente" ControlToValidate="txtDuennoID" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ValidationGroup="validar" ErrorMessage="Dígite la cédula con 9 dígitos" ControlToValidate="txtDuennoID" ValidationExpression="^\d{9}$" ForeColor="#ff0000"></asp:RegularExpressionValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ValidationGroup="validar" ErrorMessage="Debe buscar el cliente" ControlToValidate="txtDuennoID" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
                         <asp:GridView runat="server" ID="grvDuennos" CssClass="col-md-10">
@@ -157,13 +157,13 @@
             <asp:Label ID="Label10" runat="server" Text="Observaciones" CssClass="control-label col-md-2"></asp:Label>
             <div class="col-md-10">
                 <asp:TextBox ID="txtObservaciones" TextMode="MultiLine" runat="server" CssClass="form-control entrada"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Mencione observaciones del paciente" ControlToValidate="txtObservaciones" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ValidationGroup="validar" ErrorMessage="Mencione observaciones del paciente" ControlToValidate="txtObservaciones" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <asp:Button ID="btnNuevo" runat="server" Text="Nuevo" CssClass="btn btn-default" OnClick="btnNuevo_Click" />
+                <asp:Button ID="btnNuevo" runat="server" Text="Nuevo" ValidationGroup="validar" CssClass="btn btn-default" OnClick="btnNuevo_Click" />
             </div>
         </div>
 

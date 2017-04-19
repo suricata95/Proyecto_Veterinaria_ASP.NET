@@ -8,6 +8,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <script src="scripts/jquery-3.1.1.js"></script>    
+    <link href="css/huellas.css" rel="stylesheet" />
     <link href="css/formulario.css" rel="stylesheet" />
     <link href="css/bootstrap.css" rel="stylesheet" />
     <script src="scripts/bootstrap.js"></script>
@@ -51,7 +52,7 @@
                                         todos pueden ver reportes  --%>
                                     <%switch (Convert.ToInt16(Session["perfilUsuario"]))
                                         {
-                                            case 1:Response.Write("<li><a href=\"../Mantenimientos/NuevoPaciente.aspx\">Pacientes</a></li><li><a href=\"../Mantenimientos/NuevoDuenno.aspx\">Clientes</a></li><li><a href=\"../Mantenimientos/NuevoTratamiento.aspx\">Tratamientos</a></li><li><a href=\"../Mantenimientos/NuevoMedicamento.aspx\">Medicamentos</a></li><li><a href=\"../Mantenimientos/NuevoEnfermedad.aspx\">Enfermedades</a></li>");
+                                            case 1:Response.Write("<li><a href=\"../Mantenimientos/NuevoPaciente.aspx\">Pacientes</a></li><li><a href=\"../Mantenimientos/NuevoDuenno.aspx\">Dueños</a></li><li><a href=\"../Mantenimientos/NuevoTratamiento.aspx\">Tratamientos</a></li><li><a href=\"../Mantenimientos/NuevoMedicamento.aspx\">Medicamentos</a></li><li><a href=\"../Mantenimientos/NuevoEnfermedad.aspx\">Enfermedades</a></li>");
                                                 break;
                                             case 2:Response.Write("<li><a href=\"../Mantenimientos/NuevoMedicamento.aspx\">Medicamentos</a></li>");
                                                 break;
@@ -87,9 +88,18 @@
                     </div>
                 </div>
             </div>
-        </header>        
+        </header>   
         
-        <div class="col-md-8 container body-content">
+
+        <div id="mosaico-izquierda">            
+        </div>
+
+        <div id="mosaico-derecha">            
+        </div>
+         
+
+
+        <div class="container body-content">
             
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>

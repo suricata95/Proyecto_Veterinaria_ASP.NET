@@ -26,7 +26,7 @@
             <div class="col-md-10">
                 <%-- Copie todas las clases de css para cada etiqueta , por ejemplo si quita la etiqueta "entrada" el textbox queda del ancho de la pantalla --%>
                  <asp:TextBox ID="txtNombreEnfermedad" runat="server" CssClass="form-control entrada"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Ingrese el nombre de la enfermedad" ControlToValidate="txtNombreEnfermedad" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ValidationGroup="validar" runat="server" ErrorMessage="Ingrese el nombre de la enfermedad" ControlToValidate="txtNombreEnfermedad" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
             </div>
         </div>
 
@@ -35,7 +35,7 @@
             <asp:Label ID="Label3" runat="server" Text="Paciente ID" CssClass="control-label col-md-2"></asp:Label>
             <div class="col-md-10"> 
                 <asp:TextBox ID="txtPacienteID" runat="server" CssClass="form-control entrada"></asp:TextBox>
-                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Ingrese el paciente" ControlToValidate="txtPacienteID" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup="validar" runat="server" ErrorMessage="Ingrese el paciente" ControlToValidate="txtPacienteID" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
             </div>
         </div>
 
@@ -44,7 +44,7 @@
             <asp:Label ID="Label4" runat="server" Text="Sintómas" CssClass="control-label col-md-2"></asp:Label>
             <div class="col-md-10">
                 <asp:TextBox ID="txtSintomas" runat="server" CssClass="form-control entrada"></asp:TextBox>
-                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Ingrese los sintomas" ControlToValidate="txtSintomas" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ValidationGroup="validar" runat="server" ErrorMessage="Ingrese los sintomas" ControlToValidate="txtSintomas" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
             </div>
         </div>
 
@@ -52,7 +52,7 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <%--<asp:Button ID="btnNuevo" runat="server" Text="Nuevo" CssClass="btn btn-default" OnClick="btnNuevo_Click" OnClientClick="return ConfirmarIngreso();"/>--%>
-                <asp:Button ID="btnNuevo" runat="server" Text="Nuevo" CssClass="btn btn-default" OnClick="btnNuevo_Click"/>
+                <asp:Button ID="btnNuevo" runat="server" Text="Nuevo" ValidationGroup="validar" CssClass="btn btn-default" OnClick="btnNuevo_Click"/>
             </div>
         </div>
 

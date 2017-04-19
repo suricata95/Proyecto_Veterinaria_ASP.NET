@@ -48,7 +48,7 @@
             <div class="col-md-10">
                 <%-- Copie todas las clases de css para cada etiqueta , por ejemplo si quita la etiqueta "entrada" el textbox queda del ancho de la pantalla --%>
                  <asp:TextBox ID="txtPacienteID" runat="server" CssClass="form-control entrada"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Ingrese el Paciente" ControlToValidate="txtPacienteID" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ValidationGroup="validar" ErrorMessage="Ingrese el Paciente" ControlToValidate="txtPacienteID" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
             </div>
         </div>
 
@@ -57,14 +57,14 @@
             <asp:Label ID="Label2" runat="server" Text="Descripcion" CssClass="control-label col-md-2"></asp:Label>
             <div class="col-md-10">
                 <asp:TextBox ID="txtDescripcion" runat="server" CssClass="form-control entrada"></asp:TextBox>
-                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Ingrese una descripción" ControlToValidate="txtDescripcion" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ValidationGroup="validar" ErrorMessage="Ingrese una descripción" ControlToValidate="txtDescripcion" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <%--<asp:Button ID="btnNuevo" runat="server" Text="Nuevo" CssClass="btn btn-default" OnClick="btnNuevo_Click" OnClientClick="return ConfirmarIngreso();"/>--%>
-                <asp:Button ID="btnNuevo" runat="server" Text="Nuevo" CssClass="btn btn-default" OnClick="btnNuevo_Click"/>
+                <asp:Button ID="btnNuevo" runat="server" Text="Nuevo" ValidationGroup="validar" CssClass="btn btn-default" OnClick="btnNuevo_Click"/>
             </div>
         </div>
 

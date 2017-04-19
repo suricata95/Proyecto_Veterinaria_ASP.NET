@@ -24,7 +24,7 @@
             <div class="col-md-10">
                 <%-- Copie todas las clases de css para cada etiqueta , por ejemplo si quita la etiqueta "entrada" el textbox queda del ancho de la pantalla --%>
                  <asp:TextBox ID="txtNombreMedicamento" runat="server" CssClass="form-control entrada"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Ingrese el nombre del medicamento" ControlToValidate="txtNombreMedicamento" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ValidationGroup="validar" ErrorMessage="Ingrese el nombre del medicamento" ControlToValidate="txtNombreMedicamento" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
             </div>
         </div>
 
@@ -36,7 +36,7 @@
                 <ajaxToolkit:CalendarExtender runat="server" Format="dd/MM/yyyy" PopupButtonID="ImageButton1" BehaviorID="txtFecha_CalendarExtender"
                     TargetControlID="txtFechaVencimiento" ID="txtFecha_CalendarExtender"> </ajaxToolkit:CalendarExtender>
                 <asp:Image ID="ImageButton1" ImageUrl="~/img/calendar.png" runat="server" AlternateText="Fecha" ImageAlign="Left"/>
-                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Ingrese la fecha de vencimiento" ControlToValidate="txtFechaVencimiento" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ValidationGroup="validar" ErrorMessage="Ingrese la fecha de vencimiento" ControlToValidate="txtFechaVencimiento" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
             </div>
         </div>
 
@@ -44,7 +44,7 @@
             <asp:Label ID="Label3" runat="server" Text="Paciente ID" CssClass="control-label col-md-2"></asp:Label>
             <div class="col-md-10"> 
                 <asp:TextBox ID="txtPacienteID" runat="server" CssClass="form-control entrada"></asp:TextBox>
-                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Ingrese el paciente" ControlToValidate="txtPacienteID" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ValidationGroup="validar" ErrorMessage="Ingrese el paciente" ControlToValidate="txtPacienteID" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
             </div>
         </div>
 
@@ -53,7 +53,7 @@
             <asp:Label ID="Label4" runat="server" Text="Dosis" CssClass="control-label col-md-2"></asp:Label>
             <div class="col-md-10">
                 <asp:TextBox ID="txtDosis" runat="server" CssClass="form-control entrada"></asp:TextBox>
-                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Ingrese la dosis" ControlToValidate="txtDosis" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ValidationGroup="validar" ErrorMessage="Ingrese la dosis" ControlToValidate="txtDosis" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
             </div>
         </div>
 
@@ -61,7 +61,7 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <%--<asp:Button ID="btnNuevo" runat="server" Text="Nuevo" CssClass="btn btn-default" OnClick="btnNuevo_Click" OnClientClick="return ConfirmarIngreso();"/>--%>
-                <asp:Button ID="btnNuevo" runat="server" Text="Nuevo" CssClass="btn btn-default" OnClick="btnNuevo_Click"/>
+                <asp:Button ID="btnNuevo" runat="server" Text="Nuevo" ValidationGroup="validar" CssClass="btn btn-default" OnClick="btnNuevo_Click"/>
             </div>
         </div>
 

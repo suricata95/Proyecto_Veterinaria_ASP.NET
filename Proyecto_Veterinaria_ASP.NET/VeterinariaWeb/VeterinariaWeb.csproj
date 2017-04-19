@@ -74,6 +74,7 @@
     <Content Include="css\formulario.css" />
     <Content Include="css\Login.css" />
     <Content Include="css\menu.css" />
+    <Content Include="css\huellas.css" />
     <Content Include="Filtros\FiltroDuenno.aspx" />
     <Content Include="Iconos\icomoon.svg" />
     <Content Include="Iconos\style.css" />

@@ -14,7 +14,7 @@
         agregando a esa pagina enlaces para las paginas de insertar editar y eliminar --%>
     <%-- El formulario para editar sigue la misma logica --%>
     <%-- Este h2 para informar a cual mantenimiento pertenece --%>
-    <h2>Manejo de clientes</h2>
+    <h2>Manejo de dueños</h2>
     <div class="form-horizontal">
         <%-- Este h4 para informar cual acción esta realizando --%>
         <h4>Nuevo Dueño</h4>
@@ -24,7 +24,7 @@
             <div class="col-md-10">
                 <asp:TextBox ID="txtDuennoID" runat="server" CssClass="form-control entrada" ></asp:TextBox>                
                <ajaxToolkit:MaskedEditExtender ID="mskDuennoID" Mask="9-9999-9999" runat="server" TargetControlID="txtDuennoID" />
-                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Ingrese su idenfiticación" ControlToValidate="txtDuennoID" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                 <asp:RequiredFieldValidator  ID="RequiredFieldValidator1" runat="server" ValidationGroup="validar" ErrorMessage="Ingrese su idenfiticación" ControlToValidate="txtDuennoID" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
                 
                 <%-- ReadOnly solo para que sea de LECTURA --%>
             </div>
@@ -37,7 +37,7 @@
             <div class="col-md-10">
                 <%-- Copie todas las clases de css para cada etiqueta , por ejemplo si quita la etiqueta "entrada" el textbox queda del ancho de la pantalla --%>
                  <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control entrada"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Ingrese su nombre" ControlToValidate="txtNombre" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ValidationGroup="validar" ErrorMessage="Ingrese su nombre" ControlToValidate="txtNombre" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
             </div>
         </div>
         <%-- Y aquí termina el maquetado, los otros controles es seguir la misma logica --%>
@@ -45,7 +45,7 @@
             <asp:Label ID="Label2" runat="server" Text="Apellidos" CssClass="control-label col-md-2"></asp:Label>
             <div class="col-md-10">
                 <asp:TextBox ID="txtApellidos" runat="server" CssClass="form-control entrada"></asp:TextBox>
-                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Ingrese su primer y segundo apellido" ControlToValidate="txtApellidos" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ValidationGroup="validar" ErrorMessage="Ingrese su primer y segundo apellido" ControlToValidate="txtApellidos" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
             </div>
         </div>
 
@@ -54,7 +54,7 @@
             <div class="col-md-10">
                <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control entrada"></asp:TextBox>
                 <ajaxToolkit:MaskedEditExtender ID="mskTelefono" Mask="9999-9999" runat="server" TargetControlID="txtTelefono"/>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Ingrese su teléfono" ControlToValidate="txtTelefono" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ValidationGroup="validar" ErrorMessage="Ingrese su teléfono" ControlToValidate="txtTelefono" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator>
             </div>
         </div>
 
@@ -62,15 +62,15 @@
             <asp:Label ID="Label4" runat="server" Text="Correo Eléctronico" CssClass="control-label col-md-2"></asp:Label>
             <div class="col-md-10">
                 <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control entrada" ></asp:TextBox>
-                <asp:RegularExpressionValidator ID="txtEmailReg" runat="server" ErrorMessage="Ingrese un correo elétronico válido" ControlToValidate="txtCorreo" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="#cc0000"></asp:RegularExpressionValidator> <%--Validacion para que lo que se ingreso en el campo sea con formato correcto--%>
-                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Ingrese su correo" ControlToValidate="txtCorreo" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator> <%--Validacion para que el campo no este vacio--%>
+                <asp:RegularExpressionValidator ID="txtEmailReg" runat="server" ValidationGroup="validar" ErrorMessage="Ingrese un correo elétronico válido" ControlToValidate="txtCorreo" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="#cc0000"></asp:RegularExpressionValidator> <%--Validacion para que lo que se ingreso en el campo sea con formato correcto--%>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ValidationGroup="validar" ErrorMessage="Ingrese su correo" ControlToValidate="txtCorreo" Display="Dynamic" ForeColor="#cc0000"></asp:RequiredFieldValidator> <%--Validacion para que el campo no este vacio--%>
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <%--<asp:Button ID="btnNuevo" runat="server" Text="Nuevo" CssClass="btn btn-default" OnClick="btnNuevo_Click" OnClientClick="return ConfirmarIngreso();"/>--%>
-                <asp:Button ID="btnNuevo" runat="server" Text="Nuevo" CssClass="btn btn-default" OnClick="btnNuevo_Click"/>
+                <asp:Button ID="btnNuevo" runat="server" Text="Nuevo" ValidationGroup="validar" CssClass="btn btn-default" OnClick="btnNuevo_Click"/>
             </div>
         </div>
 

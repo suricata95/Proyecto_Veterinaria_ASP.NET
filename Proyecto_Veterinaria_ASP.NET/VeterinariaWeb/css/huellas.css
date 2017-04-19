@@ -1,0 +1,35 @@
+﻿
+#mosaico-izquierda {
+    margin-left: -250px;
+    left: 250px;
+    width: 60px;
+    background-image: url('../img/cf_buscandohuellas-03.png');
+    background-repeat:repeat;
+    background-size:60px 60px;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: all 0.4s ease 0s;
+}
+
+#mosaico-derecha {
+    margin-right: -250px;
+    right: 250px;
+    width: 60px;
+    background-image: url('../img/cf_buscandohuellas-03.png');
+    background-repeat:repeat;
+    background-size:60px 60px;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: all 0.4s ease 0s;
+}
+
+
+
+
+
+
+
