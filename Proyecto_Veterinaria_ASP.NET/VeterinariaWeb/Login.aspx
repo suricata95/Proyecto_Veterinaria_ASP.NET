@@ -22,11 +22,12 @@
             <asp:Label ID="Label1" runat="server" Text="Bienvenido: "></asp:Label></h4>            
             <input type="text" id="txtNombreUsuario" class="form-control input-sm chat-input" placeholder="Nombre de usuario" runat="server"/>
             <br />            
-            <input type="password" id="txtContrasena" class="form-control input-sm chat-input" placeholder="password" runat="server"/>
+            <input type="password" id="txtContrasena" class="form-control input-sm chat-input" placeholder="Contraseña" runat="server"/>
             <br />
             <div class="wrapper">
             <span class="group-btn"> 
-                <asp:Button ID="btnIniciarSesion" runat="server" Text="Iniciar sesion" OnClick="btnIniciarSesion_Click"  CssClass="btn btn-primary btn-md"/>                             
+                <asp:Button ID="btnIniciarSesion" runat="server" Text="Iniciar sesion" OnClick="btnIniciarSesion_Click"  CssClass="btn btn-primary btn-md"/> 
+                <a href="Usuarios.aspx">¿No tienes usuario?</a>      
             </span>
             </div>
             </div>
