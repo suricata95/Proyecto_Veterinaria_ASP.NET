@@ -29,8 +29,6 @@ namespace VeterinariaDatos
             comando.Parameters.AddWithValue("@UsuarioID", usuarioID);
             db.ExecuteNonQuery(comando);
         }
-
-
         public static DataSet SeleccionarTodos()
         {
             Database db = DatabaseFactory.CreateDatabase("Default");

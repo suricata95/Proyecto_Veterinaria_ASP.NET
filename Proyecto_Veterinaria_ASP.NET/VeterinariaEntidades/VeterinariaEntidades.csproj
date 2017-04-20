@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CitasEntidad.cs" />
+    <Compile Include="DetalleFacturaEntidad.cs" />
     <Compile Include="DuennoEntidad.cs" />
     <Compile Include="EnfermedadesEntidad.cs" />
     <Compile Include="ExamenEntidad.cs" />

@@ -32,12 +32,14 @@ namespace VeterinariaWeb.Mantenimientos
 
         protected void grvEnfermedades_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
-
+            grvEnfermedades.EditIndex = -1;
+            datosEnfermedades();
         }
 
         protected void grvEnfermedades_RowEditing(object sender, GridViewEditEventArgs e)
         {
-
+            grvEnfermedades.EditIndex = e.NewEditIndex;
+            datosEnfermedades();
         }
 
         protected void grvEnfermedades_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -48,11 +50,23 @@ namespace VeterinariaWeb.Mantenimientos
         protected void grvEnfermedades_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
 
+            enfermedad.enfermedadID = ((int)grvEnfermedades.DataKeys[e.RowIndex].Value);
+            enfermedad.nombreEnfermedad = ((TextBox)grvEnfermedades.Rows[e.RowIndex].FindControl("nombreEnfermedad")).Text;
+            enfermedad.pacienteID = Convert.ToInt32(((TextBox)grvEnfermedades.Rows[e.RowIndex].FindControl("pacienteID")).Text);
+            enfermedad.sintomasEnfermedad = ((TextBox)grvEnfermedades.Rows[e.RowIndex].FindControl("sintomasEnfermedad")).Text;
+            servicio.modificarEnfermedades(enfermedad);
+            grvEnfermedades.EditIndex = -1;
+            datosEnfermedades();
+            
         }
 
         protected void grvEnfermedades_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
 
+            enfermedad.enfermedadID = Convert.ToInt32(grvEnfermedades.DataKeys[e.RowIndex].Values[0]);
+            servicio.eliminarEnfermedades(enfermedad);
+            grvEnfermedades.EditIndex = -1;
+            datosEnfermedades();
         }
 
         protected void btnNuevo_Click(object sender, EventArgs e)

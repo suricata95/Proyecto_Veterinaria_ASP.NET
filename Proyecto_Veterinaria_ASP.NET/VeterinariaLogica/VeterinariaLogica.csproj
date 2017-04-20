@@ -41,8 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CitaLogica.cs" />
+    <Compile Include="DetalleFacturaLogica.cs" />
     <Compile Include="DuennoLogica.cs" />
     <Compile Include="EnfermedadLogica.cs" />
+    <Compile Include="FacturaLogica.cs" />
     <Compile Include="MedicamentoLogica.cs" />
     <Compile Include="PacienteLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

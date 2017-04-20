@@ -44,6 +44,7 @@
     <Compile Include="CitaDatos.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="DatabaseFactory.cs" />
+    <Compile Include="DetalleFactura.cs" />
     <Compile Include="DuennoDatos.cs" />
     <Compile Include="EnfermedadesDatos.cs" />
     <Compile Include="FacturaDatos.cs" />
