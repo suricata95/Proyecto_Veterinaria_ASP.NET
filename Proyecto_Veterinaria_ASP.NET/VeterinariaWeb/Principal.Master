@@ -76,6 +76,12 @@
                                     <%--<li><a href="../Procesos/ProcesoCitas.aspx">Nueva Cita</a></li>
                                     <li><a href="#">Services Sub Menu 2</a></li>  --%>                                  
                                 </ul>
+                                <ul>
+                                    <%if (Convert.ToInt16(Session["perfilUsuario"]) == 1 || Convert.ToInt16(Session["perfilUsuario"]) == 2)
+                                        {
+                                            Response.Write("<li><a href=\"../Procesos/ProcesoFactura.aspx\">Nueva Factura</a></li>");
+                                        } %>
+                                </ul>
                             </li>
                             <li><a href="#">Reportes</a></li>                            
                         </ul>

@@ -12,7 +12,7 @@ namespace VeterinariaDatos
     public class FacturaDatos
     {
 
-        public static void Insertar(DateTime fech, decimal subT, decimal imp, decimal desc, decimal total, int duennoID, int idDet, int usuarioID)
+        public static void Insertar(DateTime fech, decimal total, int duennoID, int idDet, int usuarioID)
         {
             Database db = DatabaseFactory.CreateDatabase("Default");
 
@@ -20,9 +20,9 @@ namespace VeterinariaDatos
             comando.CommandType = CommandType.StoredProcedure;
 
             comando.Parameters.AddWithValue("@Fecha", fech);
-            comando.Parameters.AddWithValue("@SubTotal", subT);
-            comando.Parameters.AddWithValue("@Impuesto", imp);
-            comando.Parameters.AddWithValue("@Descuento", desc);
+            //comando.Parameters.AddWithValue("@SubTotal", subT);
+            //comando.Parameters.AddWithValue("@Impuesto", imp);
+            //comando.Parameters.AddWithValue("@Descuento", desc);
             comando.Parameters.AddWithValue("@Total", total);
             comando.Parameters.AddWithValue("@DuennoID", duennoID);
             comando.Parameters.AddWithValue("@idDetalle", idDet);
@@ -33,7 +33,7 @@ namespace VeterinariaDatos
         {
             Database db = DatabaseFactory.CreateDatabase("Default");
 
-            SqlCommand comando = new SqlCommand("PA_SeleccionarReservas");
+            SqlCommand comando = new SqlCommand("PA_SeleccionarFacturas");
             // Es requerido indicar que el tipo es un StoreProcedure
             comando.CommandType = CommandType.StoredProcedure;
 

@@ -200,8 +200,37 @@ namespace WebService
         }
 
 
+        //Detalle 
+
+        [WebMethod]
+        public List<DetalleFacturaEntidad> ObtenerTodosDetalle()
+        {
+            DetalleFacturaLogica det = new DetalleFacturaLogica();
+            return det.ObtenerTodos();
+        }
+
+        [WebMethod]
+        public DetalleFacturaEntidad ObtenerDetalle(int idDet)
+        {
+            DetalleFacturaLogica det = new DetalleFacturaLogica();
+            return det.ObtenerDetalleFactura(idDet);
+        }
 
 
+        //Factura
+        [WebMethod]
+        public void insertarFactura(FacturaEntidad fac)
+        {
+            FacturaLogica factu = new FacturaLogica();
+            factu.Nuevo(fac);
+        }
+
+        [WebMethod]
+        public List<FacturaEntidad> ObtenerTodosFacturas()
+        {
+            FacturaLogica f = new FacturaLogica();
+            return f.ObtenerTodos();
+        }
 
         [WebMethod]
         public UsuariosEntidad obtieneUsuario (string usuario,string pass)
