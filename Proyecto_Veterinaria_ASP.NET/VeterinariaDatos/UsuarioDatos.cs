@@ -25,5 +25,6 @@ namespace VeterinariaDatos
             DataSet ds = db.ExecuteReader(comando, "UsuarioLogica");
             return ds;
         }
+
     }
 }

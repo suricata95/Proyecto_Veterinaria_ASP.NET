@@ -83,7 +83,7 @@
                                         } %>
                                 </ul>
                             </li>
-                            <li><a href="#">Reportes</a></li>                            
+                            <%--<li><a href="#">Reportes</a></li>   --%>                         
                         </ul>
                         <div class="navbar-left navbar-text">Bienvenido
                             <asp:Label ID="Label2" runat="server" Text=""></asp:Label>

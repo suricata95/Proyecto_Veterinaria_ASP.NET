@@ -27,7 +27,7 @@
             <div class="wrapper">
             <span class="group-btn"> 
                 <asp:Button ID="btnIniciarSesion" runat="server" Text="Iniciar sesion" OnClick="btnIniciarSesion_Click"  CssClass="btn btn-primary btn-md"/> 
-                <a href="Usuarios.aspx">¿No tienes usuario?</a>      
+                <%--<a href="Usuarios.aspx">¿No tienes usuario?</a>--%>      
             </span>
             </div>
             </div>
